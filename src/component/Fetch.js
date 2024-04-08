@@ -15,7 +15,7 @@ function Fetch(props) {
                 : `https://newsapi.org/v2/top-headlines?country=in&apiKey=68f216a2b4604beb81b9ce77ac1eb8cc&page=${page}&pageSize=${pageSize}`;
             const res = await axios.get(url);
             setData(res.data.articles);
-            setTogit add README.mdtalResults(res.data.totalResults);
+            setTotalResults(res.data.totalResults);
             setLoading(false);
         } catch (error) {
             console.log(error);
